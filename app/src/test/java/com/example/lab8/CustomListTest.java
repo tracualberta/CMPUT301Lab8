@@ -35,4 +35,20 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+
+    /**
+     * get the size of the list
+     * increase the list by adding a new city
+     * decrease the list by deleting city
+     * check if our current size matches the initial
+     one
+     */
+    @Test
+    public void deleteCityTest(){
+        list = MockCityList();
+        int listSize = list.getCount();
+        list.addCity(new City("Estevan", "SK"));
+        list.deleteCity(0);
+        assertEquals(list.getCount(),listSize);
+    }
 }
