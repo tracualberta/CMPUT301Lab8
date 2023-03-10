@@ -51,4 +51,18 @@ public class CustomListTest {
         list.deleteCity(0);
         assertEquals(list.getCount(),listSize);
     }
+
+    /**
+     * add 3 cities to list
+     * check if countCities returns 3
+     one
+     */
+    @Test
+    public void countCitiesTest(){
+        list = MockCityList();
+        list.addCity(new City("Estevan", "SK"));
+        list.addCity(new City("Estevan", "SK"));
+        list.addCity(new City("Estevan", "SK"));
+        assertEquals(list.countCities(),3);
+    }
 }
